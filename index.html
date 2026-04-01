@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Lumière — Brewed to Perfection</title>
+  <meta name="description" content="Café Lumière is a premium artisan café offering handcrafted coffee, pastries, and an immersive cozy ambience in the heart of the city." />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span class="brand-icon">☕</span>
+        Café <em>Lumière</em>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="toggler-icon"><i class="fa fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#signature">Signature</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link btn-reserve" href="#contact">Reserve a Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-bg-blur"></div>
+    <!-- Floating coffee beans -->
+    <div class="bean bean-1">🫘</div>
+    <div class="bean bean-2">🫘</div>
+    <div class="bean bean-3">🫘</div>
+    <div class="bean bean-4">🫘</div>
+    <div class="bean bean-5">🫘</div>
+
+    <div class="container hero-content text-center">
+      <!-- 3D Coffee Cup -->
+      <div class="coffee-cup-wrapper" id="coffeeCup">
+        <div class="cup-3d">
+          <div class="cup-body">
+            <div class="cup-liquid"></div>
+            <div class="cup-shine"></div>
+          </div>
+          <div class="cup-handle"></div>
+          <div class="cup-saucer"></div>
+          <!-- Steam -->
+          <div class="steam-container">
+            <div class="steam steam-1"></div>
+            <div class="steam steam-2"></div>
+            <div class="steam steam-3"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text reveal-hero">
+        <p class="hero-tagline">Est. 2015 · Artisan Roasters</p>
+        <h1 class="hero-title">Brewed to<br /><em>Perfection</em></h1>
+        <p class="hero-subtitle">Where every cup tells a story and every sip is a moment of pure indulgence.</p>
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-glow me-3">Explore Menu</a>
+          <a href="#about" class="btn btn-ghost">Our Story</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span></span>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT US ========== -->
+  <section id="about" class="about-section section-pad">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-left">
+          <div class="about-img-wrapper">
+            <div class="about-img-frame">
+              <div class="about-img-inner" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80')"></div>
+            </div>
+            <div class="about-badge">
+              <span class="badge-number">10</span>
+              <span class="badge-text">Years of<br/>Excellence</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-right">
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">More Than Just a<br /><em>Cup of Coffee</em></h2>
+          <p class="section-body">At Café Lumière, we believe that coffee is not just a drink — it's an experience, a ritual, a moment of warmth in a busy world. Nestled in the heart of the city, our café is a haven where artistry meets comfort.</p>
+          <p class="section-body">From sourcing single-origin beans across the globe to perfecting each roast in-house, every detail is crafted with passion and precision.</p>
+          <div class="about-stats row mt-4">
+            <div class="col-4 stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Menu Items</div>
+            </div>
+            <div class="col-4 stat-item">
+              <div class="stat-number">12K</div>
+              <div class="stat-label">Happy Guests</div>
+            </div>
+            <div class="col-4 stat-item">
+              <div class="stat-number">8</div>
+              <div class="stat-label">Awards Won</div>
+            </div>
+          </div>
+          <a href="#menu" class="btn btn-glow mt-4">Discover Our Menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU / SPECIALTIES ========== -->
+  <section id="menu" class="menu-section section-pad">
+    <div class="container">
+      <div class="text-center mb-5 reveal-up">
+        <div class="section-label">What We Serve</div>
+        <h2 class="section-title">Our Menu &amp; <em>Specialties</em></h2>
+        <p class="section-subtitle">Handcrafted with love and the finest ingredients</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="menu-tabs text-center mb-5 reveal-up">
+        <button class="tab-btn active" data-category="coffee">☕ Coffee</button>
+        <button class="tab-btn" data-category="desserts">🍰 Desserts</button>
+        <button class="tab-btn" data-category="snacks">🥐 Snacks</button>
+      </div>
+
+      <!-- Menu Cards -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- COFFEE -->
+        <div class="menu-card tilt-card" data-category="coffee">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <span class="menu-tag">Bestseller</span>
+            <h4 class="menu-name">Velvet Espresso</h4>
+            <p class="menu-desc">Smooth double shot with golden crema</p>
+            <div class="menu-footer">
+              <span class="menu-price">$4.50</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card tilt-card" data-category="coffee">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h4 class="menu-name">Caramel Cloud Latte</h4>
+            <p class="menu-desc">Silky latte with caramel drizzle & foam</p>
+            <div class="menu-footer">
+              <span class="menu-price">$5.80</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card tilt-card" data-category="coffee">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h4 class="menu-name">Hazelnut Mocha</h4>
+            <p class="menu-desc">Rich espresso blended with hazelnut & chocolate</p>
+            <div class="menu-footer">
+              <span class="menu-price">$6.20</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="menu-card tilt-card" data-category="desserts">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <span class="menu-tag">Chef's Pick</span>
+            <h4 class="menu-name">Tiramisu Royale</h4>
+            <p class="menu-desc">Classic Italian with espresso-soaked sponge</p>
+            <div class="menu-footer">
+              <span class="menu-price">$7.50</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card tilt-card" data-category="desserts">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h4 class="menu-name">Belgian Waffle</h4>
+            <p class="menu-desc">Crispy waffles with berry compote & cream</p>
+            <div class="menu-footer">
+              <span class="menu-price">$8.00</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card tilt-card" data-category="desserts">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h4 class="menu-name">Dark Chocolate Tart</h4>
+            <p class="menu-desc">Decadent dark chocolate on buttery crust</p>
+            <div class="menu-footer">
+              <span class="menu-price">$6.80</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SNACKS -->
+        <div class="menu-card tilt-card" data-category="snacks">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <span class="menu-tag">Fresh Daily</span>
+            <h4 class="menu-name">Butter Croissant</h4>
+            <p class="menu-desc">Flaky, golden, baked fresh every morning</p>
+            <div class="menu-footer">
+              <span class="menu-price">$3.50</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card tilt-card" data-category="snacks">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h4 class="menu-name">Avocado Toast</h4>
+            <p class="menu-desc">Sourdough with smashed avo & poached egg</p>
+            <div class="menu-footer">
+              <span class="menu-price">$9.00</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card tilt-card" data-category="snacks">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h4 class="menu-name">Almond Biscotti</h4>
+            <p class="menu-desc">Twice-baked Italian classic, perfect with coffee</p>
+            <div class="menu-footer">
+              <span class="menu-price">$3.00</span>
+              <button class="add-btn"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIGNATURE DRINKS ========== -->
+  <section id="signature" class="signature-section section-pad">
+    <div class="container">
+      <div class="text-center mb-5 reveal-up">
+        <div class="section-label">Our Masterpieces</div>
+        <h2 class="section-title">Signature <em>Creations</em></h2>
+        <p class="section-subtitle">Drinks you won't find anywhere else</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 reveal-up" style="transition-delay:.1s">
+          <div class="sig-card">
+            <div class="sig-glow"></div>
+            <div class="sig-img" style="background-image:url('https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&q=80')"></div>
+            <div class="sig-body">
+              <div class="sig-badge">Signature</div>
+              <h3 class="sig-name">Lumière Latte</h3>
+              <p class="sig-desc">Our iconic drink — espresso with saffron-infused milk, honey, and edible gold dust.</p>
+              <div class="sig-price">$9.50</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal-up" style="transition-delay:.2s">
+          <div class="sig-card featured">
+            <div class="sig-glow"></div>
+            <div class="featured-ribbon">⭐ Most Loved</div>
+            <div class="sig-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80')"></div>
+            <div class="sig-body">
+              <div class="sig-badge">Exclusive</div>
+              <h3 class="sig-name">Midnight Brew</h3>
+              <p class="sig-desc">Cold brew with dark chocolate foam, toasted coconut, and espresso bloom.</p>
+              <div class="sig-price">$10.00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal-up" style="transition-delay:.3s">
+          <div class="sig-card">
+            <div class="sig-glow"></div>
+            <div class="sig-img" style="background-image:url('https://images.unsplash.com/photo-1622020457014-aed1cc44f25e?w=400&q=80')"></div>
+            <div class="sig-body">
+              <div class="sig-badge">Seasonal</div>
+              <h3 class="sig-name">Rose Gold Cappuccino</h3>
+              <p class="sig-desc">Velvety cappuccino with rose syrup, cinnamon dust, and caramel lattice.</p>
+              <div class="sig-price">$8.50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE / AMBIENCE ========== -->
+  <section id="experience" class="experience-section">
+    <div class="experience-overlay"></div>
+    <div class="container experience-content text-center">
+      <div class="exp-inner reveal-up">
+        <div class="section-label light">The Café Lumière Way</div>
+        <h2 class="section-title light">Step Into a World of<br /><em>Warmth &amp; Wonder</em></h2>
+        <p class="exp-body">Every corner of our café is designed to inspire. From the soft amber lighting to the scent of fresh roasts, we create an atmosphere that makes time slow down. Come for the coffee. Stay for the feeling.</p>
+        <a href="#gallery" class="btn btn-glow mt-4">See the Ambience</a>
+      </div>
+    </div>
+
+    <!-- Floating ambient elements -->
+    <div class="amb-circle amb-1"></div>
+    <div class="amb-circle amb-2"></div>
+    <div class="amb-circle amb-3"></div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="testimonials-section section-pad">
+    <div class="container">
+      <div class="text-center mb-5 reveal-up">
+        <div class="section-label">Voices of Love</div>
+        <h2 class="section-title">What Our Guests <em>Say</em></h2>
+      </div>
+
+      <div class="testimonial-track-wrapper">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"An absolutely magical experience. The Lumière Latte is unlike anything I've ever tasted. This place has become my second home."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#D4A373,#A1887F)">E</div>
+              <div>
+                <div class="testi-name">Elena Marchetti</div>
+                <div class="testi-role">Food Blogger</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The ambience, the aroma, the art — Café Lumière is not just a café, it's a sanctuary. I come here every morning before work."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#A1887F,#3E2723)">J</div>
+              <div>
+                <div class="testi-name">James Holloway</div>
+                <div class="testi-role">Architect</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"Best tiramisu in the city — hands down. Every visit feels like a warm hug. The staff truly cares about your experience."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#D4A373,#8D6E63)">S</div>
+              <div>
+                <div class="testi-name">Sophia Chen</div>
+                <div class="testi-role">Pastry Chef</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"I've traveled the world and Café Lumière's cold brew rivals anything in Paris or Rome. Premium quality in every detail."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#A1887F,#D4A373)">M</div>
+              <div>
+                <div class="testi-name">Marco Devito</div>
+                <div class="testi-role">Travel Writer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The Rose Gold Cappuccino is pure artistry. The café is warm, the music is perfect, and the croissants are divine."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#8D6E63,#D4A373)">A</div>
+              <div>
+                <div class="testi-name">Aisha Rahman</div>
+                <div class="testi-role">Interior Designer</div>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"An absolutely magical experience. The Lumière Latte is unlike anything I've ever tasted. This place has become my second home."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#D4A373,#A1887F)">E</div>
+              <div>
+                <div class="testi-name">Elena Marchetti</div>
+                <div class="testi-role">Food Blogger</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-text">"The ambience, the aroma, the art — Café Lumière is not just a café, it's a sanctuary. I come here every morning before work."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#A1887F,#3E2723)">J</div>
+              <div>
+                <div class="testi-name">James Holloway</div>
+                <div class="testi-role">Architect</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="gallery-section section-pad">
+    <div class="container">
+      <div class="text-center mb-5 reveal-up">
+        <div class="section-label">A Glimpse Inside</div>
+        <h2 class="section-title">Our <em>Gallery</em></h2>
+        <p class="section-subtitle">Every frame, a mood. Every cup, a story.</p>
+      </div>
+
+      <div class="gallery-grid reveal-up">
+        <div class="gallery-item gallery-large">
+          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80')"></div>
+          <div class="gallery-overlay"><span>☕ Our Space</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&q=80')"></div>
+          <div class="gallery-overlay"><span>🌿 Morning Light</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80')"></div>
+          <div class="gallery-overlay"><span>☕ Latte Art</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1521047361814-47b8bca1fd51?w=400&q=80')"></div>
+          <div class="gallery-overlay"><span>🍰 Pastries</span></div>
+        </div>
+        <div class="gallery-item gallery-wide">
+          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80')"></div>
+          <div class="gallery-overlay"><span>🕯️ Evening Vibes</span></div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1521749027720-b9ad8226c879?w=400&q=80')"></div>
+          <div class="gallery-overlay"><span>🫘 Origin Beans</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING / OFFERS ========== -->
+  <section id="pricing" class="pricing-section section-pad">
+    <div class="container">
+      <div class="text-center mb-5 reveal-up">
+        <div class="section-label">Value & Indulgence</div>
+        <h2 class="section-title">Our <em>Packages</em></h2>
+        <p class="section-subtitle">From solo sips to full-party experiences</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 reveal-up" style="transition-delay:.1s">
+          <div class="price-card">
+            <div class="price-icon">☕</div>
+            <h4 class="price-title">Solo Escape</h4>
+            <p class="price-desc">Perfect for solitary coffee lovers seeking a peaceful corner.</p>
+            <div class="price-value">$15 <span>/ visit</span></div>
+            <ul class="price-features">
+              <li><i class="fa fa-check"></i> 1 Signature Drink</li>
+              <li><i class="fa fa-check"></i> 1 Freshly Baked Snack</li>
+              <li><i class="fa fa-check"></i> Free Wi-Fi Access</li>
+              <li><i class="fa fa-check"></i> Cozy Corner Seat</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-glow w-100">Book Now</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal-up" style="transition-delay:.2s">
+          <div class="price-card featured-plan">
+            <div class="plan-badge">⭐ Best Seller</div>
+            <div class="price-icon">🌟</div>
+            <h4 class="price-title">Lumière Experience</h4>
+            <p class="price-desc">The full immersive café experience for two, curated to perfection.</p>
+            <div class="price-value">$35 <span>/ couple</span></div>
+            <ul class="price-features">
+              <li><i class="fa fa-check"></i> 2 Signature Drinks</li>
+              <li><i class="fa fa-check"></i> Dessert Platter</li>
+              <li><i class="fa fa-check"></i> Priority Seating</li>
+              <li><i class="fa fa-check"></i> Complimentary Biscotti</li>
+              <li><i class="fa fa-check"></i> Chef's Recommendation</li>
+            </ul>
+            <a href="#contact" class="btn btn-glow w-100">Book Now</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal-up" style="transition-delay:.3s">
+          <div class="price-card">
+            <div class="price-icon">🎉</div>
+            <h4 class="price-title">Grand Soirée</h4>
+            <p class="price-desc">Private café experience for groups and celebrations.</p>
+            <div class="price-value">$120 <span>/ group (8+)</span></div>
+            <ul class="price-features">
+              <li><i class="fa fa-check"></i> Unlimited Beverages</li>
+              <li><i class="fa fa-check"></i> Full Dessert Bar</li>
+              <li><i class="fa fa-check"></i> Private Section</li>
+              <li><i class="fa fa-check"></i> Custom Cake Option</li>
+              <li><i class="fa fa-check"></i> Dedicated Host</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-glow w-100">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="contact-section section-pad">
+    <div class="container">
+      <div class="text-center mb-5 reveal-up">
+        <div class="section-label">Find Us</div>
+        <h2 class="section-title">Come Visit <em>Us</em></h2>
+        <p class="section-subtitle">We'd love to welcome you at our door</p>
+      </div>
+
+      <div class="row g-5 justify-content-center">
+        <div class="col-md-4 reveal-left">
+          <div class="contact-info-card">
+            <div class="ci-icon"><i class="fa fa-map-marker-alt"></i></div>
+            <h5>Our Address</h5>
+            <p>24 Lumière Lane, Artisan Quarter<br />Greenwich, London SE10 8RN</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal-up">
+          <div class="contact-info-card">
+            <div class="ci-icon"><i class="fa fa-clock"></i></div>
+            <h5>Opening Hours</h5>
+            <p>Mon – Fri: 7:00 AM – 10:00 PM<br />Sat – Sun: 8:00 AM – 11:00 PM</p>
+          </div>
+        </div>
+        <div class="col-md-4 reveal-right">
+          <div class="contact-info-card">
+            <div class="ci-icon"><i class="fa fa-phone"></i></div>
+            <h5>Call Us</h5>
+            <p>+44 20 7946 0958<br /><small>Reservations & Enquiries</small></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="text-center mt-5 reveal-up">
+        <p class="social-label">Connect with us</p>
+        <div class="social-icons-group">
+          <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-icon" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-texture"></div>
+    <div class="container footer-inner">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <div class="footer-brand">
+            <span class="brand-icon">☕</span> Café <em>Lumière</em>
+          </div>
+          <p class="footer-tagline">Where every sip is a journey and every moment is crafted with care.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-heading">Navigate</h6>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#signature">Signature</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h6 class="footer-heading">Offerings</h6>
+          <ul class="footer-links">
+            <li><a href="#">Coffee Blends</a></li>
+            <li><a href="#">Patisserie</a></li>
+            <li><a href="#">Brunch Menu</a></li>
+            <li><a href="#">Private Events</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4">
+          <h6 class="footer-heading">Newsletter</h6>
+          <p class="footer-newsletter-text">Receive seasonal specials and exclusive offers.</p>
+          <div class="footer-newsletter">
+            <input type="email" placeholder="Your email address" class="newsletter-input" />
+            <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
+          </div>
+          <div class="footer-awards mt-4">
+            <span class="award-badge">🏆 Best Café 2024</span>
+            <span class="award-badge">⭐ Top Rated London</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Café Lumière. All rights reserved. Crafted with ☕ &amp; ❤️</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Allergen Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
