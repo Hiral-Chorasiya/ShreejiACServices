@@ -3,653 +3,876 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café Lumière — Brewed to Perfection</title>
-  <meta name="description" content="Café Lumière is a premium artisan café offering handcrafted coffee, pastries, and an immersive cozy ambience in the heart of the city." />
+  <meta name="description" content="Shreeji AC Service - Fast & Reliable AC Repair, Installation & Maintenance in Ahmedabad. Call us for same-day AC service." />
+  <meta name="keywords" content="AC repair Ahmedabad, AC service Ahmedabad, AC installation Ahmedabad, AC gas filling, AC maintenance, Shreeji AC" />
+  <title>Shreeji AC Service | Fast & Reliable AC Service in Ahmedabad</title>
 
-  <!-- Bootstrap 5 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <i class="fas fa-snowflake fa-spin"></i>
+      </div>
+      <div class="preloader-text">Shreeji AC Service</div>
+      <div class="preloader-bar"><div class="preloader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <span class="brand-icon">☕</span>
-        Café <em>Lumière</em>
+      <a class="navbar-brand" href="#hero">
+        <span class="brand-icon"><i class="fas fa-snowflake"></i></span>
+        <span class="brand-name">Shreeji <span class="brand-accent">AC</span> Service</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="toggler-icon"><i class="fa fa-bars"></i></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#signature">Signature</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-lg-3">
-            <a class="nav-link btn-reserve" href="#contact">Reserve a Table</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#areas">Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stats">Stats</a></li>
+          <li class="nav-item"><a class="nav-link nav-cta" href="#contact">Book Service</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ========== HERO SECTION ========== -->
+  <!-- ===================== HERO SECTION ===================== -->
   <section id="hero" class="hero-section">
-    <div class="hero-particles" id="heroParticles"></div>
-    <div class="hero-bg-blur"></div>
-    <!-- Floating coffee beans -->
-    <div class="bean bean-1">🫘</div>
-    <div class="bean bean-2">🫘</div>
-    <div class="bean bean-3">🫘</div>
-    <div class="bean bean-4">🫘</div>
-    <div class="bean bean-5">🫘</div>
+    <!-- Particles Canvas -->
+    <canvas id="heroCanvas"></canvas>
 
-    <div class="container hero-content text-center">
-      <!-- 3D Coffee Cup -->
-      <div class="coffee-cup-wrapper" id="coffeeCup">
-        <div class="cup-3d">
-          <div class="cup-body">
-            <div class="cup-liquid"></div>
-            <div class="cup-shine"></div>
+    <!-- Floating Icons -->
+    <div class="floating-icons">
+      <div class="float-icon float-1"><i class="fas fa-snowflake"></i></div>
+      <div class="float-icon float-2"><i class="fas fa-fan"></i></div>
+      <div class="float-icon float-3"><i class="fas fa-tools"></i></div>
+      <div class="float-icon float-4"><i class="fas fa-thermometer-half"></i></div>
+      <div class="float-icon float-5"><i class="fas fa-wind"></i></div>
+      <div class="float-icon float-6"><i class="fas fa-snowflake"></i></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="container hero-container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 hero-text" data-aos="fade-right">
+          <div class="hero-badge">
+            <i class="fas fa-star"></i> Trusted by 500+ Customers
           </div>
-          <div class="cup-handle"></div>
-          <div class="cup-saucer"></div>
-          <!-- Steam -->
-          <div class="steam-container">
-            <div class="steam steam-1"></div>
-            <div class="steam steam-2"></div>
-            <div class="steam steam-3"></div>
+          <h1 class="hero-title">
+            Fast &amp; Reliable<br/>
+            <span class="gradient-text">AC Service</span><br/>
+            in Ahmedabad
+          </h1>
+          <p class="hero-subtitle">
+            <span><i class="fas fa-wrench"></i> Repair</span>
+            <span><i class="fas fa-screwdriver-wrench"></i> Installation</span>
+            <span><i class="fas fa-shield-alt"></i> Maintenance</span>
+          </p>
+          <p class="hero-desc">Professional AC services at your doorstep. Same-day service available across all major areas of Ahmedabad.</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-primary-custom">
+              <i class="fas fa-calendar-check me-2"></i> Book Service
+            </a>
+            <a href="tel:+919876543210" class="btn btn-secondary-custom">
+              <i class="fas fa-phone me-2"></i> Call Now
+            </a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item">
+              <i class="fas fa-clock"></i>
+              <span>Same Day Service</span>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-medal"></i>
+              <span>Certified Technicians</span>
+            </div>
+            <div class="trust-item">
+              <i class="fas fa-tag"></i>
+              <span>Best Price Guarantee</span>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="hero-text reveal-hero">
-        <p class="hero-tagline">Est. 2015 · Artisan Roasters</p>
-        <h1 class="hero-title">Brewed to<br /><em>Perfection</em></h1>
-        <p class="hero-subtitle">Where every cup tells a story and every sip is a moment of pure indulgence.</p>
-        <div class="hero-cta-group">
-          <a href="#menu" class="btn btn-glow me-3">Explore Menu</a>
-          <a href="#about" class="btn btn-ghost">Our Story</a>
+        <div class="col-lg-5 hero-visual" data-aos="fade-left">
+          <div class="ac-3d-card">
+            <div class="ac-inner">
+              <div class="ac-unit-display">
+                <div class="ac-body">
+                  <div class="ac-top-bar"></div>
+                  <div class="ac-vents">
+                    <span></span><span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="ac-controls">
+                    <div class="ac-power on"></div>
+                    <div class="ac-indicator"></div>
+                    <div class="ac-temp">22°C</div>
+                  </div>
+                  <div class="ac-bottom-bar"></div>
+                </div>
+                <div class="ac-glow-ring"></div>
+                <div class="ac-particle p1"></div>
+                <div class="ac-particle p2"></div>
+                <div class="ac-particle p3"></div>
+                <div class="ac-particle p4"></div>
+              </div>
+              <div class="ac-label">
+                <span>Smart Climate Control</span>
+                <div class="ac-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="scroll-indicator">
-      <span></span>
-      <p>Scroll Down</p>
+    <!-- Wave Bottom -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 1080,0 1440,60 L1440,100 L0,100 Z" fill="#0a0e27"/>
+      </svg>
     </div>
   </section>
 
-  <!-- ========== ABOUT US ========== -->
-  <section id="about" class="about-section section-pad">
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" class="about-section section-padding">
+    <div class="section-bg-grid"></div>
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 reveal-left">
-          <div class="about-img-wrapper">
-            <div class="about-img-frame">
-              <div class="about-img-inner" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80')"></div>
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">Who We Are</div>
+        <h2 class="section-title">About <span class="gradient-text">Shreeji AC Service</span></h2>
+        <p class="section-subtitle">Delivering cool comfort across Ahmedabad for over 5 years</p>
+      </div>
+      <div class="row align-items-center g-5 mt-2">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="about-card glass-card">
+            <div class="about-img-wrap">
+              <div class="about-icon-display">
+                <i class="fas fa-snowflake main-icon"></i>
+                <div class="icon-rings">
+                  <div class="ring r1"></div>
+                  <div class="ring r2"></div>
+                  <div class="ring r3"></div>
+                </div>
+                <div class="orbit-dot od1"><i class="fas fa-wrench"></i></div>
+                <div class="orbit-dot od2"><i class="fas fa-fan"></i></div>
+                <div class="orbit-dot od3"><i class="fas fa-bolt"></i></div>
+              </div>
             </div>
-            <div class="about-badge">
-              <span class="badge-number">10</span>
-              <span class="badge-text">Years of<br/>Excellence</span>
+            <div class="experience-badge">
+              <span class="exp-num">5+</span>
+              <span class="exp-text">Years of Excellence</span>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal-right">
-          <div class="section-label">Who We Are</div>
-          <h2 class="section-title">More Than Just a<br /><em>Cup of Coffee</em></h2>
-          <p class="section-body">At Café Lumière, we believe that coffee is not just a drink — it's an experience, a ritual, a moment of warmth in a busy world. Nestled in the heart of the city, our café is a haven where artistry meets comfort.</p>
-          <p class="section-body">From sourcing single-origin beans across the globe to perfecting each roast in-house, every detail is crafted with passion and precision.</p>
-          <div class="about-stats row mt-4">
-            <div class="col-4 stat-item">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Menu Items</div>
-            </div>
-            <div class="col-4 stat-item">
-              <div class="stat-number">12K</div>
-              <div class="stat-label">Happy Guests</div>
-            </div>
-            <div class="col-4 stat-item">
-              <div class="stat-number">8</div>
-              <div class="stat-label">Awards Won</div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="about-content">
+            <h3 class="about-heading">Your Trusted AC Service Partner in Ahmedabad</h3>
+            <p class="about-desc">We are a team of certified and experienced AC technicians dedicated to providing fast, affordable, and reliable AC services throughout Ahmedabad. From AC repair to installation and maintenance, we handle it all with professionalism and care.</p>
+            <div class="about-features row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                  <div>
+                    <strong>Expert Technicians</strong>
+                    <span>Trained &amp; certified professionals</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+                  <div>
+                    <strong>Affordable Pricing</strong>
+                    <span>Best rates, no hidden charges</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                  <div>
+                    <strong>Fast Response</strong>
+                    <span>Same-day service available</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                  <div>
+                    <strong>24/7 Support</strong>
+                    <span>Always here when you need us</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fas fa-check-double"></i></div>
+                  <div>
+                    <strong>Quality Guarantee</strong>
+                    <span>Service warranty on all work</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div>
+                    <strong>Pan Ahmedabad</strong>
+                    <span>Covering all major areas</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <a href="#menu" class="btn btn-glow mt-4">Discover Our Menu</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== MENU / SPECIALTIES ========== -->
-  <section id="menu" class="menu-section section-pad">
+  <!-- ===================== SERVICES SECTION ===================== -->
+  <section id="services" class="services-section section-padding">
+    <div class="services-bg"></div>
     <div class="container">
-      <div class="text-center mb-5 reveal-up">
-        <div class="section-label">What We Serve</div>
-        <h2 class="section-title">Our Menu &amp; <em>Specialties</em></h2>
-        <p class="section-subtitle">Handcrafted with love and the finest ingredients</p>
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle">Comprehensive AC solutions for homes &amp; businesses</p>
       </div>
+      <div class="row g-4 mt-2">
 
-      <!-- Category Tabs -->
-      <div class="menu-tabs text-center mb-5 reveal-up">
-        <button class="tab-btn active" data-category="coffee">☕ Coffee</button>
-        <button class="tab-btn" data-category="desserts">🍰 Desserts</button>
-        <button class="tab-btn" data-category="snacks">🥐 Snacks</button>
-      </div>
-
-      <!-- Menu Cards -->
-      <div class="menu-grid" id="menuGrid">
-        <!-- COFFEE -->
-        <div class="menu-card tilt-card" data-category="coffee">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <span class="menu-tag">Bestseller</span>
-            <h4 class="menu-name">Velvet Espresso</h4>
-            <p class="menu-desc">Smooth double shot with golden crema</p>
-            <div class="menu-footer">
-              <span class="menu-price">$4.50</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
+        <!-- Service Card 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-card">
+            <div class="service-card-glow"></div>
+            <div class="service-icon-wrap">
+              <div class="service-icon"><i class="fas fa-tools"></i></div>
             </div>
+            <h4 class="service-title">AC Repair</h4>
+            <p class="service-desc">Fast diagnosis and repair of all AC brands. Not cooling? Noisy? We fix it all with genuine parts.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> All brands supported</li>
+              <li><i class="fas fa-check"></i> Genuine spare parts</li>
+              <li><i class="fas fa-check"></i> 30-day service warranty</li>
+            </ul>
+            <a href="#contact" class="service-cta">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
           </div>
         </div>
 
-        <div class="menu-card tilt-card" data-category="coffee">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <h4 class="menu-name">Caramel Cloud Latte</h4>
-            <p class="menu-desc">Silky latte with caramel drizzle & foam</p>
-            <div class="menu-footer">
-              <span class="menu-price">$5.80</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
+        <!-- Service Card 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-card-glow"></div>
+            <div class="service-icon-wrap">
+              <div class="service-icon"><i class="fas fa-screwdriver-wrench"></i></div>
             </div>
+            <h4 class="service-title">AC Installation</h4>
+            <p class="service-desc">Professional installation of split, window, and inverter ACs. Neat wiring, proper bracket fitting.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> Split &amp; window AC</li>
+              <li><i class="fas fa-check"></i> Neat cable management</li>
+              <li><i class="fas fa-check"></i> Post-install testing</li>
+            </ul>
+            <a href="#contact" class="service-cta">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
           </div>
         </div>
 
-        <div class="menu-card tilt-card" data-category="coffee">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <h4 class="menu-name">Hazelnut Mocha</h4>
-            <p class="menu-desc">Rich espresso blended with hazelnut & chocolate</p>
-            <div class="menu-footer">
-              <span class="menu-price">$6.20</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
+        <!-- Service Card 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-card-glow"></div>
+            <div class="service-icon-wrap">
+              <div class="service-icon"><i class="fas fa-gas-pump"></i></div>
             </div>
+            <h4 class="service-title">AC Gas Filling</h4>
+            <p class="service-desc">Low on gas? We refill refrigerant gas (R22/R32/R410a) for optimal cooling performance.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> R22, R32, R410a gas</li>
+              <li><i class="fas fa-check"></i> Leak detection included</li>
+              <li><i class="fas fa-check"></i> Performance testing</li>
+            </ul>
+            <a href="#contact" class="service-cta">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
           </div>
         </div>
 
-        <!-- DESSERTS -->
-        <div class="menu-card tilt-card" data-category="desserts">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <span class="menu-tag">Chef's Pick</span>
-            <h4 class="menu-name">Tiramisu Royale</h4>
-            <p class="menu-desc">Classic Italian with espresso-soaked sponge</p>
-            <div class="menu-footer">
-              <span class="menu-price">$7.50</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
+        <!-- Service Card 4 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-card-glow"></div>
+            <div class="service-icon-wrap">
+              <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
             </div>
+            <h4 class="service-title">AC Maintenance</h4>
+            <p class="service-desc">Annual maintenance contracts (AMC) to keep your AC running at peak efficiency all year long.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> Scheduled visits</li>
+              <li><i class="fas fa-check"></i> Priority service</li>
+              <li><i class="fas fa-check"></i> Extended lifespan</li>
+            </ul>
+            <a href="#contact" class="service-cta">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
           </div>
         </div>
 
-        <div class="menu-card tilt-card" data-category="desserts">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <h4 class="menu-name">Belgian Waffle</h4>
-            <p class="menu-desc">Crispy waffles with berry compote & cream</p>
-            <div class="menu-footer">
-              <span class="menu-price">$8.00</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
+        <!-- Service Card 5 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-card-glow"></div>
+            <div class="service-icon-wrap">
+              <div class="service-icon"><i class="fas fa-broom"></i></div>
             </div>
+            <h4 class="service-title">AC Cleaning</h4>
+            <p class="service-desc">Deep cleaning of filters, coils, and drainage. Remove bacteria, dust and improve air quality.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> Deep filter cleaning</li>
+              <li><i class="fas fa-check"></i> Coil &amp; drain cleaning</li>
+              <li><i class="fas fa-check"></i> Sanitization spray</li>
+            </ul>
+            <a href="#contact" class="service-cta">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
           </div>
         </div>
 
-        <div class="menu-card tilt-card" data-category="desserts">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <h4 class="menu-name">Dark Chocolate Tart</h4>
-            <p class="menu-desc">Decadent dark chocolate on buttery crust</p>
-            <div class="menu-footer">
-              <span class="menu-price">$6.80</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
+        <!-- Service Card 6 - Emergency -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card service-card-featured">
+            <div class="service-card-glow"></div>
+            <div class="service-featured-badge">Popular</div>
+            <div class="service-icon-wrap">
+              <div class="service-icon"><i class="fas fa-bolt"></i></div>
             </div>
+            <h4 class="service-title">Emergency Service</h4>
+            <p class="service-desc">AC breakdown in summer heat? Our emergency team arrives within 2-4 hours, any time of day.</p>
+            <ul class="service-list">
+              <li><i class="fas fa-check"></i> 2-4 hour response</li>
+              <li><i class="fas fa-check"></i> Available 7 days/week</li>
+              <li><i class="fas fa-check"></i> No hidden charges</li>
+            </ul>
+            <a href="tel:+919876543210" class="service-cta">Call Now <i class="fas fa-phone ms-1"></i></a>
           </div>
         </div>
 
-        <!-- SNACKS -->
-        <div class="menu-card tilt-card" data-category="snacks">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <span class="menu-tag">Fresh Daily</span>
-            <h4 class="menu-name">Butter Croissant</h4>
-            <p class="menu-desc">Flaky, golden, baked fresh every morning</p>
-            <div class="menu-footer">
-              <span class="menu-price">$3.50</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card tilt-card" data-category="snacks">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <h4 class="menu-name">Avocado Toast</h4>
-            <p class="menu-desc">Sourdough with smashed avo & poached egg</p>
-            <div class="menu-footer">
-              <span class="menu-price">$9.00</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-card tilt-card" data-category="snacks">
-          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&q=80')"></div>
-          <div class="menu-card-body">
-            <h4 class="menu-name">Almond Biscotti</h4>
-            <p class="menu-desc">Twice-baked Italian classic, perfect with coffee</p>
-            <div class="menu-footer">
-              <span class="menu-price">$3.00</span>
-              <button class="add-btn"><i class="fa fa-plus"></i></button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== SIGNATURE DRINKS ========== -->
-  <section id="signature" class="signature-section section-pad">
+  <!-- ===================== AREAS SECTION ===================== -->
+  <section id="areas" class="areas-section section-padding">
     <div class="container">
-      <div class="text-center mb-5 reveal-up">
-        <div class="section-label">Our Masterpieces</div>
-        <h2 class="section-title">Signature <em>Creations</em></h2>
-        <p class="section-subtitle">Drinks you won't find anywhere else</p>
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">Coverage</div>
+        <h2 class="section-title">Areas We <span class="gradient-text">Cover</span></h2>
+        <p class="section-subtitle">Serving all major localities across Ahmedabad</p>
       </div>
-
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4 reveal-up" style="transition-delay:.1s">
-          <div class="sig-card">
-            <div class="sig-glow"></div>
-            <div class="sig-img" style="background-image:url('https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&q=80')"></div>
-            <div class="sig-body">
-              <div class="sig-badge">Signature</div>
-              <h3 class="sig-name">Lumière Latte</h3>
-              <p class="sig-desc">Our iconic drink — espresso with saffron-infused milk, honey, and edible gold dust.</p>
-              <div class="sig-price">$9.50</div>
-            </div>
-          </div>
+      <div class="areas-grid mt-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Nikol</span>
         </div>
-
-        <div class="col-md-4 reveal-up" style="transition-delay:.2s">
-          <div class="sig-card featured">
-            <div class="sig-glow"></div>
-            <div class="featured-ribbon">⭐ Most Loved</div>
-            <div class="sig-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80')"></div>
-            <div class="sig-body">
-              <div class="sig-badge">Exclusive</div>
-              <h3 class="sig-name">Midnight Brew</h3>
-              <p class="sig-desc">Cold brew with dark chocolate foam, toasted coconut, and espresso bloom.</p>
-              <div class="sig-price">$10.00</div>
-            </div>
-          </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Naroda</span>
         </div>
-
-        <div class="col-md-4 reveal-up" style="transition-delay:.3s">
-          <div class="sig-card">
-            <div class="sig-glow"></div>
-            <div class="sig-img" style="background-image:url('https://images.unsplash.com/photo-1622020457014-aed1cc44f25e?w=400&q=80')"></div>
-            <div class="sig-body">
-              <div class="sig-badge">Seasonal</div>
-              <h3 class="sig-name">Rose Gold Cappuccino</h3>
-              <p class="sig-desc">Velvety cappuccino with rose syrup, cinnamon dust, and caramel lattice.</p>
-              <div class="sig-price">$8.50</div>
-            </div>
-          </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Bapunagar</span>
         </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Odhav</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Vastral</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Maninagar</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Satellite</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Bopal</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Gota</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Chandkheda</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Vastrapur</span>
+        </div>
+        <div class="area-item">
+          <div class="area-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <span>Naranpura</span>
+        </div>
+        <div class="area-item area-item-cta">
+          <div class="area-icon"><i class="fas fa-plus"></i></div>
+          <span>And More...</span>
+        </div>
+      </div>
+      <div class="text-center mt-4" data-aos="fade-up">
+        <p class="areas-note"><i class="fas fa-info-circle me-2"></i>Don't see your area? <a href="tel:+919876543210">Call us</a> — we likely cover it too!</p>
       </div>
     </div>
   </section>
 
-  <!-- ========== EXPERIENCE / AMBIENCE ========== -->
-  <section id="experience" class="experience-section">
-    <div class="experience-overlay"></div>
-    <div class="container experience-content text-center">
-      <div class="exp-inner reveal-up">
-        <div class="section-label light">The Café Lumière Way</div>
-        <h2 class="section-title light">Step Into a World of<br /><em>Warmth &amp; Wonder</em></h2>
-        <p class="exp-body">Every corner of our café is designed to inspire. From the soft amber lighting to the scent of fresh roasts, we create an atmosphere that makes time slow down. Come for the coffee. Stay for the feeling.</p>
-        <a href="#gallery" class="btn btn-glow mt-4">See the Ambience</a>
-      </div>
-    </div>
-
-    <!-- Floating ambient elements -->
-    <div class="amb-circle amb-1"></div>
-    <div class="amb-circle amb-2"></div>
-    <div class="amb-circle amb-3"></div>
-  </section>
-
-  <!-- ========== TESTIMONIALS ========== -->
-  <section id="testimonials" class="testimonials-section section-pad">
+  <!-- ===================== PRICING SECTION ===================== -->
+  <section id="pricing" class="pricing-section section-padding">
+    <div class="pricing-bg"></div>
     <div class="container">
-      <div class="text-center mb-5 reveal-up">
-        <div class="section-label">Voices of Love</div>
-        <h2 class="section-title">What Our Guests <em>Say</em></h2>
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">Plans</div>
+        <h2 class="section-title">Transparent <span class="gradient-text">Pricing</span></h2>
+        <p class="section-subtitle">No hidden charges. Choose the plan that suits you best.</p>
       </div>
+      <div class="row g-4 justify-content-center mt-2">
 
-      <div class="testimonial-track-wrapper">
+        <!-- Plan 1: Basic -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pricing-icon"><i class="fas fa-leaf"></i></div>
+              <h4 class="plan-name">Basic Service</h4>
+              <div class="plan-price">
+                <span class="currency">₹</span>
+                <span class="amount">399</span>
+                <span class="per">/visit</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> AC Basic Checkup</li>
+              <li><i class="fas fa-check"></i> Filter Cleaning</li>
+              <li><i class="fas fa-check"></i> Performance Test</li>
+              <li><i class="fas fa-check"></i> Basic Report</li>
+              <li class="disabled"><i class="fas fa-times"></i> Gas Refill</li>
+              <li class="disabled"><i class="fas fa-times"></i> Deep Cleaning</li>
+            </ul>
+            <a href="#contact" class="pricing-btn">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Plan 2: Standard (Recommended) -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+          <div class="pricing-card pricing-featured">
+            <div class="pricing-badge">Recommended</div>
+            <div class="pricing-glow"></div>
+            <div class="pricing-header">
+              <div class="pricing-icon"><i class="fas fa-star"></i></div>
+              <h4 class="plan-name">Standard Service</h4>
+              <div class="plan-price">
+                <span class="currency">₹</span>
+                <span class="amount">799</span>
+                <span class="per">/visit</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> Complete AC Checkup</li>
+              <li><i class="fas fa-check"></i> Deep Cleaning</li>
+              <li><i class="fas fa-check"></i> Gas Level Check</li>
+              <li><i class="fas fa-check"></i> Minor Repairs Included</li>
+              <li><i class="fas fa-check"></i> Performance Optimization</li>
+              <li class="disabled"><i class="fas fa-times"></i> Gas Refill (Extra)</li>
+            </ul>
+            <a href="#contact" class="pricing-btn pricing-btn-featured">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Plan 3: Premium -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pricing-icon"><i class="fas fa-crown"></i></div>
+              <h4 class="plan-name">Premium AMC</h4>
+              <div class="plan-price">
+                <span class="currency">₹</span>
+                <span class="amount">2499</span>
+                <span class="per">/year</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fas fa-check"></i> 2 Full Service Visits</li>
+              <li><i class="fas fa-check"></i> Gas Refill Included</li>
+              <li><i class="fas fa-check"></i> Priority Emergency Support</li>
+              <li><i class="fas fa-check"></i> Free Minor Repairs</li>
+              <li><i class="fas fa-check"></i> Deep Cleaning x2</li>
+              <li><i class="fas fa-check"></i> Dedicated Technician</li>
+            </ul>
+            <a href="#contact" class="pricing-btn">Get Premium</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS SECTION ===================== -->
+  <section id="testimonials" class="testimonials-section section-padding">
+    <div class="container">
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">Reviews</div>
+        <h2 class="section-title">What Our Customers <span class="gradient-text">Say</span></h2>
+        <p class="section-subtitle">Real reviews from real customers across Ahmedabad</p>
+      </div>
+      <div class="testimonials-slider mt-4" id="testimonialSlider">
         <div class="testimonial-track" id="testimonialTrack">
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"An absolutely magical experience. The Lumière Latte is unlike anything I've ever tasted. This place has become my second home."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#D4A373,#A1887F)">E</div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Excellent service! The technician came within 3 hours and fixed our AC perfectly. Very professional and affordable pricing. Highly recommended!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
               <div>
-                <div class="testi-name">Elena Marchetti</div>
-                <div class="testi-role">Food Blogger</div>
+                <strong>Ramesh Patel</strong>
+                <span>Nikol, Ahmedabad</span>
               </div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The ambience, the aroma, the art — Café Lumière is not just a café, it's a sanctuary. I come here every morning before work."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#A1887F,#3E2723)">J</div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Our AC was leaking water and not cooling. Shreeji AC team diagnosed and fixed the problem the same day. Fair price and honest service!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
               <div>
-                <div class="testi-name">James Holloway</div>
-                <div class="testi-role">Architect</div>
+                <strong>Priya Shah</strong>
+                <span>Maninagar, Ahmedabad</span>
               </div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"Best tiramisu in the city — hands down. Every visit feels like a warm hug. The staff truly cares about your experience."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#D4A373,#8D6E63)">S</div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Took the annual maintenance contract. Best decision! Two visits per year, they keep the AC running perfectly. Very satisfied with the service."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
               <div>
-                <div class="testi-name">Sophia Chen</div>
-                <div class="testi-role">Pastry Chef</div>
+                <strong>Kiran Mehta</strong>
+                <span>Satellite, Ahmedabad</span>
               </div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"I've traveled the world and Café Lumière's cold brew rivals anything in Paris or Rome. Premium quality in every detail."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#A1887F,#D4A373)">M</div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"Called for AC gas filling. The technician explained everything clearly, checked for leaks first, then refilled gas. AC is working great now. 5 stars!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
               <div>
-                <div class="testi-name">Marco Devito</div>
-                <div class="testi-role">Travel Writer</div>
+                <strong>Ankit Desai</strong>
+                <span>Naroda, Ahmedabad</span>
               </div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The Rose Gold Cappuccino is pure artistry. The café is warm, the music is perfect, and the croissants are divine."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#8D6E63,#D4A373)">A</div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Got 3 ACs installed in my new flat. Very clean work with proper cable management. Professional team, on time and polite. Will definitely use again!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
               <div>
-                <div class="testi-name">Aisha Rahman</div>
-                <div class="testi-role">Interior Designer</div>
+                <strong>Neha Joshi</strong>
+                <span>Bopal, Ahmedabad</span>
               </div>
             </div>
           </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"An absolutely magical experience. The Lumière Latte is unlike anything I've ever tasted. This place has become my second home."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#D4A373,#A1887F)">E</div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Emergency call at 9pm — AC stopped working in peak summer. Shreeji team arrived in 2 hours and repaired it. Real life savers! Thank you so much."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar"><i class="fas fa-user"></i></div>
               <div>
-                <div class="testi-name">Elena Marchetti</div>
-                <div class="testi-role">Food Blogger</div>
+                <strong>Suresh Trivedi</strong>
+                <span>Bapunagar, Ahmedabad</span>
               </div>
             </div>
           </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-text">"The ambience, the aroma, the art — Café Lumière is not just a café, it's a sanctuary. I come here every morning before work."</p>
-            <div class="testi-author">
-              <div class="testi-avatar" style="background:linear-gradient(135deg,#A1887F,#3E2723)">J</div>
-              <div>
-                <div class="testi-name">James Holloway</div>
-                <div class="testi-role">Architect</div>
-              </div>
-            </div>
-          </div>
+
         </div>
+      </div>
+      <!-- Slider Controls -->
+      <div class="slider-controls text-center mt-4">
+        <button class="slider-btn" id="sliderPrev"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="sliderDots"></div>
+        <button class="slider-btn" id="sliderNext"><i class="fas fa-chevron-right"></i></button>
       </div>
     </div>
   </section>
 
-  <!-- ========== GALLERY ========== -->
-  <section id="gallery" class="gallery-section section-pad">
+  <!-- ===================== STATS SECTION ===================== -->
+  <section id="stats" class="stats-section section-padding">
+    <div class="stats-bg"></div>
     <div class="container">
-      <div class="text-center mb-5 reveal-up">
-        <div class="section-label">A Glimpse Inside</div>
-        <h2 class="section-title">Our <em>Gallery</em></h2>
-        <p class="section-subtitle">Every frame, a mood. Every cup, a story.</p>
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">Numbers</div>
+        <h2 class="section-title">Our <span class="gradient-text">Achievements</span></h2>
       </div>
-
-      <div class="gallery-grid reveal-up">
-        <div class="gallery-item gallery-large">
-          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80')"></div>
-          <div class="gallery-overlay"><span>☕ Our Space</span></div>
+      <div class="row g-4 mt-2">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-smile"></i></div>
+            <div class="stat-number counter" data-target="500">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&q=80')"></div>
-          <div class="gallery-overlay"><span>🌿 Morning Light</span></div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-snowflake"></i></div>
+            <div class="stat-number counter" data-target="1000">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">ACs Serviced</div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80')"></div>
-          <div class="gallery-overlay"><span>☕ Latte Art</span></div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+            <div class="stat-number counter" data-target="5">0</div>
+            <div class="stat-suffix">+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1521047361814-47b8bca1fd51?w=400&q=80')"></div>
-          <div class="gallery-overlay"><span>🍰 Pastries</span></div>
-        </div>
-        <div class="gallery-item gallery-wide">
-          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80')"></div>
-          <div class="gallery-overlay"><span>🕯️ Evening Vibes</span></div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1521749027720-b9ad8226c879?w=400&q=80')"></div>
-          <div class="gallery-overlay"><span>🫘 Origin Beans</span></div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-thumbs-up"></i></div>
+            <div class="stat-number counter" data-target="98">0</div>
+            <div class="stat-suffix">%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== PRICING / OFFERS ========== -->
-  <section id="pricing" class="pricing-section section-pad">
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact" class="contact-section section-padding">
     <div class="container">
-      <div class="text-center mb-5 reveal-up">
-        <div class="section-label">Value & Indulgence</div>
-        <h2 class="section-title">Our <em>Packages</em></h2>
-        <p class="section-subtitle">From solo sips to full-party experiences</p>
+      <div class="section-header text-center" data-aos="fade-up">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Book Your <span class="gradient-text">AC Service</span></h2>
+        <p class="section-subtitle">Fast response guaranteed. We'll confirm your booking within minutes.</p>
       </div>
+      <div class="row g-5 mt-2 align-items-start">
 
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4 reveal-up" style="transition-delay:.1s">
-          <div class="price-card">
-            <div class="price-icon">☕</div>
-            <h4 class="price-title">Solo Escape</h4>
-            <p class="price-desc">Perfect for solitary coffee lovers seeking a peaceful corner.</p>
-            <div class="price-value">$15 <span>/ visit</span></div>
-            <ul class="price-features">
-              <li><i class="fa fa-check"></i> 1 Signature Drink</li>
-              <li><i class="fa fa-check"></i> 1 Freshly Baked Snack</li>
-              <li><i class="fa fa-check"></i> Free Wi-Fi Access</li>
-              <li><i class="fa fa-check"></i> Cozy Corner Seat</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline-glow w-100">Book Now</a>
+        <!-- Contact Info -->
+        <div class="col-lg-5" data-aos="fade-right">
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-info-text">
+                <strong>Call Us</strong>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+              </div>
+            </div>
+            <a href="https://wa.me/919876543210?text=Hi!%20I%20need%20AC%20service." target="_blank" class="whatsapp-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span>Chat on WhatsApp</span>
+              <div class="wa-pulse"></div>
+            </a>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-info-text">
+                <strong>Working Hours</strong>
+                <span>Mon–Sun: 8:00 AM – 9:00 PM</span>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-text">
+                <strong>Location</strong>
+                <span>Ahmedabad, Gujarat, India</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-4 reveal-up" style="transition-delay:.2s">
-          <div class="price-card featured-plan">
-            <div class="plan-badge">⭐ Best Seller</div>
-            <div class="price-icon">🌟</div>
-            <h4 class="price-title">Lumière Experience</h4>
-            <p class="price-desc">The full immersive café experience for two, curated to perfection.</p>
-            <div class="price-value">$35 <span>/ couple</span></div>
-            <ul class="price-features">
-              <li><i class="fa fa-check"></i> 2 Signature Drinks</li>
-              <li><i class="fa fa-check"></i> Dessert Platter</li>
-              <li><i class="fa fa-check"></i> Priority Seating</li>
-              <li><i class="fa fa-check"></i> Complimentary Biscotti</li>
-              <li><i class="fa fa-check"></i> Chef's Recommendation</li>
-            </ul>
-            <a href="#contact" class="btn btn-glow w-100">Book Now</a>
+        <!-- Contact Form -->
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="contact-form-card glass-card">
+            <form id="contactForm">
+              <div class="form-group-custom">
+                <label for="name">Your Name</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="name" class="form-control-custom" placeholder="Enter your name" required />
+                </div>
+              </div>
+              <div class="form-group-custom">
+                <label for="phone">Phone Number</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-phone"></i>
+                  <input type="tel" id="phone" class="form-control-custom" placeholder="Enter your phone number" required />
+                </div>
+              </div>
+              <div class="form-group-custom">
+                <label for="service">Service Required</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-wrench"></i>
+                  <select id="service" class="form-control-custom">
+                    <option value="">Select a service</option>
+                    <option>AC Repair</option>
+                    <option>AC Installation</option>
+                    <option>AC Gas Filling</option>
+                    <option>AC Maintenance / AMC</option>
+                    <option>AC Deep Cleaning</option>
+                    <option>Emergency Service</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group-custom">
+                <label for="message">Message</label>
+                <div class="input-wrapper textarea-wrap">
+                  <i class="fas fa-comment-dots"></i>
+                  <textarea id="message" class="form-control-custom" rows="4" placeholder="Describe your AC issue or any details..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary-custom w-100">
+                <i class="fas fa-paper-plane me-2"></i> Send Booking Request
+              </button>
+              <div class="form-success-msg" id="formSuccess">
+                <i class="fas fa-check-circle"></i> Thank you! We'll contact you shortly.
+              </div>
+            </form>
           </div>
         </div>
 
-        <div class="col-md-4 reveal-up" style="transition-delay:.3s">
-          <div class="price-card">
-            <div class="price-icon">🎉</div>
-            <h4 class="price-title">Grand Soirée</h4>
-            <p class="price-desc">Private café experience for groups and celebrations.</p>
-            <div class="price-value">$120 <span>/ group (8+)</span></div>
-            <ul class="price-features">
-              <li><i class="fa fa-check"></i> Unlimited Beverages</li>
-              <li><i class="fa fa-check"></i> Full Dessert Bar</li>
-              <li><i class="fa fa-check"></i> Private Section</li>
-              <li><i class="fa fa-check"></i> Custom Cake Option</li>
-              <li><i class="fa fa-check"></i> Dedicated Host</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline-glow w-100">Book Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT SECTION ========== -->
-  <section id="contact" class="contact-section section-pad">
-    <div class="container">
-      <div class="text-center mb-5 reveal-up">
-        <div class="section-label">Find Us</div>
-        <h2 class="section-title">Come Visit <em>Us</em></h2>
-        <p class="section-subtitle">We'd love to welcome you at our door</p>
-      </div>
-
-      <div class="row g-5 justify-content-center">
-        <div class="col-md-4 reveal-left">
-          <div class="contact-info-card">
-            <div class="ci-icon"><i class="fa fa-map-marker-alt"></i></div>
-            <h5>Our Address</h5>
-            <p>24 Lumière Lane, Artisan Quarter<br />Greenwich, London SE10 8RN</p>
-          </div>
-        </div>
-        <div class="col-md-4 reveal-up">
-          <div class="contact-info-card">
-            <div class="ci-icon"><i class="fa fa-clock"></i></div>
-            <h5>Opening Hours</h5>
-            <p>Mon – Fri: 7:00 AM – 10:00 PM<br />Sat – Sun: 8:00 AM – 11:00 PM</p>
-          </div>
-        </div>
-        <div class="col-md-4 reveal-right">
-          <div class="contact-info-card">
-            <div class="ci-icon"><i class="fa fa-phone"></i></div>
-            <h5>Call Us</h5>
-            <p>+44 20 7946 0958<br /><small>Reservations & Enquiries</small></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Social Links -->
-      <div class="text-center mt-5 reveal-up">
-        <p class="social-label">Connect with us</p>
-        <div class="social-icons-group">
-          <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" class="social-icon" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="#" class="social-icon" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer id="footer" class="site-footer">
-    <div class="footer-texture"></div>
-    <div class="container footer-inner">
-      <div class="row gy-5">
-        <div class="col-lg-4">
-          <div class="footer-brand">
-            <span class="brand-icon">☕</span> Café <em>Lumière</em>
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <div class="footer-brand">
+              <i class="fas fa-snowflake me-2"></i>
+              Shreeji <span>AC</span> Service
+            </div>
+            <p class="footer-desc">Trusted AC repair, installation &amp; maintenance service in Ahmedabad. Fast, affordable, and reliable — since 2019.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/919876543210" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
-          <p class="footer-tagline">Where every sip is a journey and every moment is crafted with care.</p>
-          <div class="footer-social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
+          <div class="col-lg-2 col-md-4 col-6">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#areas">Areas</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
           </div>
-        </div>
-
-        <div class="col-lg-2 col-6">
-          <h6 class="footer-heading">Navigate</h6>
-          <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Our Menu</a></li>
-            <li><a href="#signature">Signature</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6">
-          <h6 class="footer-heading">Offerings</h6>
-          <ul class="footer-links">
-            <li><a href="#">Coffee Blends</a></li>
-            <li><a href="#">Patisserie</a></li>
-            <li><a href="#">Brunch Menu</a></li>
-            <li><a href="#">Private Events</a></li>
-            <li><a href="#">Gift Cards</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4">
-          <h6 class="footer-heading">Newsletter</h6>
-          <p class="footer-newsletter-text">Receive seasonal specials and exclusive offers.</p>
-          <div class="footer-newsletter">
-            <input type="email" placeholder="Your email address" class="newsletter-input" />
-            <button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
+          <div class="col-lg-3 col-md-4 col-6">
+            <h5 class="footer-heading">Services</h5>
+            <ul class="footer-links">
+              <li><a href="#services">AC Repair</a></li>
+              <li><a href="#services">AC Installation</a></li>
+              <li><a href="#services">AC Gas Filling</a></li>
+              <li><a href="#services">AC Maintenance</a></li>
+              <li><a href="#services">AC Cleaning</a></li>
+            </ul>
           </div>
-          <div class="footer-awards mt-4">
-            <span class="award-badge">🏆 Best Café 2024</span>
-            <span class="award-badge">⭐ Top Rated London</span>
+          <div class="col-lg-3 col-md-4">
+            <h5 class="footer-heading">Contact</h5>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <a href="tel:+919876543210">+91 98765 43210</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <a href="https://wa.me/919876543210">WhatsApp Us</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon–Sun: 8AM – 9PM</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Ahmedabad, Gujarat</span>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 Café Lumière. All rights reserved. Crafted with ☕ &amp; ❤️</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Allergen Info</a>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2025 Shreeji AC Service. All rights reserved.</p>
+          <p>Made with <i class="fas fa-heart text-danger"></i> in Ahmedabad</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- jQuery -->
+  <!-- Floating CTA -->
+  <div class="floating-cta">
+    <a href="https://wa.me/919876543210?text=Hi!%20I%20need%20AC%20service." target="_blank" class="float-wa" title="WhatsApp Us">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+919876543210" class="float-call" title="Call Now">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
